@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import data from './db.json';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {data.items.map(item => 
+        item.type == 'select' ? 
+          <>
+            <label>{item.label}</label>
+            <select name={item.name}>
+              {item.options.map(option => 
+                <option value={option.value}>{option.label}</option>
+                )}
+            </select>
+          </>
+        :
+          <div key={item.label}>
+            <label>{item.label}</label>
+            <input type={item.type}></input>
+          </div>
+        )}
+    </>
   );
 }
 
