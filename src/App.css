@@ -1,6 +1,6 @@
 .form {
-    margin: 5em 0;
-    width: 30em;
+    margin: 2em 0;
+    width: 35em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,28 +12,46 @@
     width: 80%;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 0.5em;
 }
 
 .form__question {
-    background-color: #fee;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 1.5em;
 }
 
 .form__input {
+    color: #444;
     max-width: 100%;
     height: 1.5rem;
     font-size: 1.2em;
     outline: none;
+    border: 1px solid #666;
+    border-radius: 0.4rem;
+    padding: 0.2em 0.4em;
 }
 
 .form__select {
-    background-color: #fee;
+    color: #444;
+    height: 1.7em;
+    outline: none;
+    border: 1px solid #666;
+    border-radius: 0.4rem;
+    padding: 0.2em 0.4em;
+    font-size: 1.2em;
 }
 
 .select__option {
-    background-color: #fee;  
+    height: 1.5em;
+    font-size: 1em;
 }
 
 .form__submit {
-    background-color: #fee;
+    font-size: 1.2em;
+    margin: 1em 0;
+    padding: 0.2em 0.6em;
+    border-radius: 0.2em;
+    border: 1px solid #666;
+    cursor: pointer;
 }
