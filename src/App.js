@@ -20,6 +20,9 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formulario);
+    setFormulario({});
+    e.target.reset();
+    setChecked(false);
   }
 
   return (
