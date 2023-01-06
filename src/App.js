@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import GenericType from './components/GenericType';
+import TypeSelect from './components/TypeSelect';
 import data from './db.json';
 
 function App() {
@@ -24,28 +26,12 @@ function App() {
     <>
       <form onSubmit={handleSubmit}>
         {data.items.map(item => 
-          item.type === 'select' ?
-            <div key={item.label}>
-              <label>{item.label}</label>
-              <select name={item.name}>
-                {item.options.map(option => 
-                  <option key={option.label} value={option.value}>{option.label}</option>
-                  )}
-              </select>
-            </div>
+          item.type !== 'submit' ? item.type === 'select' ?
+            <TypeSelect item={item} key={item.label} />
           :
-            <div key={item.label}>
-              <label>{item.type === 'submit' ? '' : item.label}</label>
-              <input
-                type={item.type}
-                name={item.name}
-                value={item.value}
-                onChange={handleChange}
-                checked={checked}
-                disabled={item.type === 'submit' ? !checked : false}
-                />
-            </div>
-            
+            <GenericType key={item.label} item={item} handleChange={handleChange} checked={checked}/>
+          : 
+            <button key={item.label} type='submit' disabled={!checked}>{item.label}</button>
           )
         }
       </form>
