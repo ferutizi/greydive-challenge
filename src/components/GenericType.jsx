@@ -3,6 +3,7 @@ import '../App.css';
 const GenericType = ({ item, handleChange, checked, index }) => {
     return(
         <div className='form__container'>
+            <div className='form__divisor' />
             <label className="form__question">{item.label}</label>
             <input
                 type={item.type}
