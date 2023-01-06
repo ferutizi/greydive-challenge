@@ -27,10 +27,11 @@ function App() {
       <form onSubmit={handleSubmit}>
         {data.items.map(item => 
           item.type !== 'submit' ? item.type === 'select' ?
+            //if type is select
             <TypeSelect item={item} key={item.label} />
-          :
+          : // if type is other
             <GenericType key={item.label} item={item} handleChange={handleChange} checked={checked}/>
-          : 
+          : // if type is submit
             <button key={item.label} type='submit' disabled={!checked}>{item.label}</button>
           )
         }
