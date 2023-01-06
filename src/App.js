@@ -1,3 +1,4 @@
+import './App.css';
 import { useState } from 'react';
 import GenericType from './components/GenericType';
 import TypeSelect from './components/TypeSelect';
@@ -27,15 +28,15 @@ function App() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        {data.items.map(item => 
+      <form onSubmit={handleSubmit} className='form'>
+        {data.items.map((item, index) => 
           item.type !== 'submit' ? item.type === 'select' ?
             //if type is select
             <TypeSelect item={item} key={item.label} />
           : // if type is other
-            <GenericType key={item.label} item={item} handleChange={handleChange} checked={checked}/>
+            <GenericType key={item.label} item={item} handleChange={handleChange} checked={checked} index={index}/>
           : // if type is submit
-            <button key={item.label} type='submit' disabled={!checked}>{item.label}</button>
+            <button key={item.label} type='submit' disabled={!checked} className='form__submit'>{item.label}</button>
           )
         }
       </form>

@@ -1,0 +1,39 @@
+.form {
+    margin: 5em 0;
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fee;
+    border-radius: 1em;
+}
+
+.form__container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.form__question {
+    background-color: #fee;
+}
+
+.form__input {
+    max-width: 100%;
+    height: 1.5rem;
+    font-size: 1.2em;
+    outline: none;
+}
+
+.form__select {
+    background-color: #fee;
+}
+
+.select__option {
+    background-color: #fee;  
+}
+
+.form__submit {
+    background-color: #fee;
+}
