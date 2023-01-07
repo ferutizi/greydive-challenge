@@ -3,10 +3,13 @@ import { useState } from 'react';
 import GenericType from './components/GenericType';
 import TypeSelect from './components/TypeSelect';
 import data from './db.json';
+import { setForm } from './application/api';
+import { getForm } from './application/api';
 
 function App() {
   const [formulario, setFormulario] = useState({});
   const [checked, setChecked] = useState(false);
+  const [answers, setAnswers] = useState({})
   
   const handleChange = (e) => {
     if(e.target.type === 'checkbox') {
@@ -20,10 +23,17 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formulario);
+    setForm(formulario);
+    getResponse(formulario.email);
     setFormulario({});
     e.target.reset();
     setChecked(false);
+  }
+
+  const getResponse = async (email) => {
+    const response = await getForm(email);
+/*     setAnswers(response); */
+    console.log(response, /* answers */);
   }
 
   return (

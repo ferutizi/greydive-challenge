@@ -1,12 +1,12 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
-/* import { getAuth, setPersistence, browserLocalPersistence } from 'firebase/auth'; */
+import { getAuth, /* setPersistence, browserLocalPersistence */ } from 'firebase/auth';
 
 const firebaseConfig = {
-    apiKey: REACT_APP_API_KEY,
-    authDomain: REACT_APP_PROYECT_ID + '.firebaseapp.com',
-    projectId: REACT_APP_PROYECT_ID,
-    storageBucket: REACT_APP_PROYECT_ID + '.appspot.com',
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_PROYECT_ID + '.firebaseapp.com',
+    projectId: process.env.REACT_APP_PROYECT_ID,
+    storageBucket: process.env.REACT_APP_PROYECT_ID + '.appspot.com',
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
