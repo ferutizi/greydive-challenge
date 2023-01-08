@@ -39,14 +39,9 @@ function App() {
 
   return (
     <>
-      {modal ? 
-        <Link to="./answers">
-          <div>ver</div>
-        </Link>
-       : null}
       <Routes>
         <Route path='/' element={
-          <Home handleSubmit={handleSubmit} handleChange={handleChange} checked={checked} />
+          <Home handleSubmit={handleSubmit} handleChange={handleChange} checked={checked} modal={modal} />
         } />
         <Route path='/answers' element={<Answers answers={answers} />} />
       </Routes>

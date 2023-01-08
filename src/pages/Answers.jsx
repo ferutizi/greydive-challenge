@@ -1,7 +1,12 @@
+import { Link } from "react-router-dom";
+
 const Answers = ({ answers }) => {
     console.log(answers)
     return(
       <div>
+        <Link to="/">
+          <p>volver</p>
+        </Link>
         <table>
           <thead>
             <tr>
