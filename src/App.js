@@ -3,13 +3,12 @@ import { useState } from 'react';
 import GenericType from './components/GenericType';
 import TypeSelect from './components/TypeSelect';
 import data from './db.json';
-import { setForm } from './application/api';
-import { getForm } from './application/api';
+import { setForm, getForms } from './application/api';
 
 function App() {
   const [formulario, setFormulario] = useState({});
   const [checked, setChecked] = useState(false);
-  const [answers, setAnswers] = useState({})
+  const [answers, setAnswers] = useState(null);
   
   const handleChange = (e) => {
     if(e.target.type === 'checkbox') {
@@ -24,18 +23,17 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setForm(formulario);
-    getResponse(formulario.email);
+    getResponse();
     setFormulario({});
     e.target.reset();
     setChecked(false);
   }
 
-  const getResponse = async (email) => {
-    const response = await getForm(email);
-/*     setAnswers(response); */
-    console.log(response, /* answers */);
+  const getResponse = async () => {
+    const response = await getForms();
+    setAnswers(response);
   }
-
+  
   return (
     <>
       <form onSubmit={handleSubmit} className='form'>
@@ -50,6 +48,14 @@ function App() {
           )
         }
       </form>
+      <p>a</p>
+      <div>
+        {answers ? 
+          answers.map(item => 
+            <p key={item.form.email}>{item.form.email}</p>
+            )
+        : <p>Loading...</p>}
+      </div>
     </>
   );
 }
