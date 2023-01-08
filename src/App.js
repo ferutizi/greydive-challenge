@@ -11,13 +11,13 @@ function App() {
   const [answers, setAnswers] = useState(null);
   
   const handleChange = (e) => {
-    if(e.target.type === 'checkbox') {
-      setChecked(!checked)
-    }
     setFormulario({
       ...formulario,
       [e.target.name]: e.target.value
     })
+    if(e.target.type === 'checkbox') {
+      setChecked(!checked)
+    }
   }
 
   const handleSubmit = (e) => {
@@ -40,7 +40,7 @@ function App() {
         {data.items.map((item, index) => 
           item.type !== 'submit' ? item.type === 'select' ?
             //if type is select
-            <TypeSelect item={item} key={item.label} />
+            <TypeSelect item={item} key={item.label} handleChange={handleChange} />
           : // if type is other
             <GenericType key={item.label} item={item} handleChange={handleChange} checked={checked} index={index}/>
           : // if type is submit
@@ -48,13 +48,29 @@ function App() {
           )
         }
       </form>
-      <p>a</p>
       <div>
-        {answers ? 
-          answers.map(item => 
-            <p key={item.form.email}>{item.form.email}</p>
-            )
-        : <p>Loading...</p>}
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Fecha de nacimiento</th>
+              <th>País de origen</th>
+            </tr>
+          </thead>
+          <tbody>
+            {answers ? 
+              answers.map(item => 
+                    <tr>
+                      <td>{item.form.full_name}</td>
+                      <td>{item.form.email}</td>
+                      <td>{item.form.birth_date}</td>
+                      <td>{item.form.country_of_origin}</td>
+                    </tr>
+                )
+                : <tr><td>Loading...</td></tr>}
+          </tbody>
+        </table>
       </div>
     </>
   );
