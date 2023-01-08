@@ -61,7 +61,7 @@ function App() {
           <tbody>
             {answers ? 
               answers.map(item => 
-                    <tr>
+                    <tr key={item.form.email}>
                       <td>{item.form.full_name}</td>
                       <td>{item.form.email}</td>
                       <td>{item.form.birth_date}</td>

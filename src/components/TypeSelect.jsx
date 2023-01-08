@@ -6,6 +6,7 @@ const TypeSelect = ({ item, handleChange }) => {
             <div className='form__divisor' />
             <label className="form__question">{item.label}</label>
             <select name={item.name} onChange={handleChange} className='form__select select'>
+                <option hidden selected>Seleccione un país</option>
                 {item.options.map(option => 
                     <option
                         key={option.label}
