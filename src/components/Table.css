@@ -1,0 +1,28 @@
+.table {
+    width: 70vw;
+    text-align: center;
+    border: 2px solid hsl(261, 54%, 50%);
+}
+
+.table__row--head {
+    background-color: hsl(261, 54%, 90%);
+    color: hsl(261, 54%, 25%);
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.table__th {
+    border-bottom: 1px solid black;
+}
+
+.table__item {
+    border-bottom: 1px solid hsl(261, 54%, 70%);
+}
+
+.table__row--item:nth-child(odd) {
+	background: #fff;
+}
+
+.table__row--item:nth-child(even) {
+	background: hsl(261, 54%, 97%);
+}

@@ -5,7 +5,7 @@ const Modal = ({ setModal }) => {
     return(
         <div className="modal__container">
             <div className='modal__card'>
-                <p className='modal__title'>El formulario ha sido enviado</p>
+                <p className='modal__title'>El formulario se ha enviado</p>
                 <p className="modal__description">¿Quieres ver las respuestas enviadas?</p>
                 <div className='modal__flex'>
                     <div>
