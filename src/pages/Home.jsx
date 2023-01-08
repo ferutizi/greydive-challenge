@@ -1,9 +1,10 @@
-import GenericType from '../components/GenericType'
-import TypeSelect from '../components/TypeSelect'
-import data from '../db.json'
 import { Link } from 'react-router-dom';
+import GenericType from '../components/GenericType';
+import TypeSelect from '../components/TypeSelect';
+import data from '../db.json';
+import Modal from '../components/Modal';
 
-const Home = ({ handleSubmit, handleChange, checked, modal }) => {
+const Home = ({ handleSubmit, handleChange, checked, modal, setModal }) => {
     return(
       <>
         <form onSubmit={handleSubmit} className='form'>
@@ -18,12 +19,12 @@ const Home = ({ handleSubmit, handleChange, checked, modal }) => {
             )
           }
         </form>
-        {modal ? 
-          <Link to="./answers">
-            <div>ver</div>
-          </Link>
-          : null
-        }
+        <div>
+          {modal ? 
+            <Modal setModal={setModal} />
+            : null
+          }
+        </div>
       </>
     );
 }

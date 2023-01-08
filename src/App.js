@@ -41,8 +41,14 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={
-          <Home handleSubmit={handleSubmit} handleChange={handleChange} checked={checked} modal={modal} />
-        } />
+          <Home
+            handleSubmit={handleSubmit}
+            handleChange={handleChange}
+            checked={checked}
+            modal={modal}
+            setModal={setModal} 
+          /> }
+        />
         <Route path='/answers' element={<Answers answers={answers} />} />
       </Routes>
     </>
