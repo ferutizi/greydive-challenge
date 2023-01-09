@@ -64,3 +64,13 @@
     gap: 1em;
     justify-content: center;
 }
+
+@media (width < 500px) {
+    .modal__card {
+        width: 90vw;
+    }
+    .modal__button {
+        width: 100%;
+        min-width: 6.5em;
+    }
+}
