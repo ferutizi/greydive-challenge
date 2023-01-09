@@ -1,6 +1,6 @@
 import '../App.css';
 
-const GenericType = ({ item, handleChange, checked, index, errors, handleBlur }) => {
+const GenericType = ({ item, handleChange, checked, index }) => {
     return(
         <div className='form__container'>
             <div className='form__divisor' />
@@ -10,12 +10,11 @@ const GenericType = ({ item, handleChange, checked, index, errors, handleBlur })
                 name={item.name}
                 value={item.value}
                 onChange={handleChange}
-                onBlur={handleBlur}
                 checked={checked}
                 className='form__input'
+                required
                 autoFocus={index === 0 ? true : false}
             />
-            {errors.required && <p>{errors.required}</p>}
         </div>
     );
 }

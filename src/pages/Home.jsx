@@ -10,11 +10,15 @@ const Home = ({ handleSubmit, handleChange, checked, modal, setModal, errors, ha
           {data.items.map((item, index) => 
             item.type !== 'submit' ? item.type === 'select' ?
               //if type is select
-              <TypeSelect item={item} key={item.label} handleChange={handleChange} errors={errors} />
+              <>
+                <TypeSelect item={item} key={item.label} handleChange={handleChange} />
+              </>
             : // if type is other
-              <GenericType key={item.label} item={item} handleChange={handleChange} checked={checked} index={index} errors={errors} handleBlur={handleBlur}/>
+              <>
+                <GenericType key={item.label} item={item} handleChange={handleChange} checked={checked} index={index} />
+              </>
             : // if type is submit
-              <button key={item.label} type='submit' disabled={!checked} className='form__submit'>{item.label} handleBlur={handleBlur}</button>
+              <button key={item.label} type='submit' disabled={!checked} className='form__submit'>{item.label}</button>
             )
           }
         </form>
