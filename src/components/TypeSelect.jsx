@@ -1,6 +1,6 @@
 import '../App.css';
 
-const TypeSelect = ({ item, handleChange }) => {
+const TypeSelect = ({ item, handleChange, errors }) => {
     return(
         <div className='form__container'>
             <div className='form__divisor' />
@@ -16,6 +16,9 @@ const TypeSelect = ({ item, handleChange }) => {
                     </option>
                 )}
             </select>
+            <div>
+            {errors.required && <p>{errors.required}</p>}
+            </div>
         </div>
     );
 }
