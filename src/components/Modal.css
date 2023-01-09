@@ -39,12 +39,24 @@
 }
 
 .modal__button {
+    width: 10em;
     font-size: 1.2em;
     margin: 1em 0;
-    padding: 0.2em 0.6em;
-    border-radius: 0.2em;
-    border: 1px solid #666;
+    padding: 0.5em 0.6em;
+    border: 2px solid hsl(261, 54%, 70%);
+    border-radius: 0.5em;
+    color: hsl(261, 54%, 25%);
     cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    transition: all ease-in 0.3s;
+}
+
+.modal__button:hover {
+    background-color: hsl(261, 54%, 80%);
+}
+
+.modal__button:active {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .modal__flex {

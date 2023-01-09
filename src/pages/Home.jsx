@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import GenericType from '../components/GenericType';
 import TypeSelect from '../components/TypeSelect';
 import data from '../db.json';
