@@ -19,7 +19,7 @@ const useForm = (inicial) => {
     }
 
     return(
-        [formulario, setFormulario, handleChange, reset, checked, setChecked]
+        [formulario, handleChange, reset, checked, setChecked]
     );
 }
 

@@ -13,8 +13,8 @@ const Table = ({ answers }) => {
           </thead>
           <tbody>
             {answers ? 
-              answers.map(item => 
-                    <tr key={item.form.email} className='table__row--item'>
+              answers.map((item, index) => 
+                    <tr key={index} className='table__row--item'>
                       <td className='table__item'>{item.form.full_name}</td>
                       <td className='table__item'>{item.form.email}</td>
                       <td className='table__item'>{item.form.birth_date}</td>
