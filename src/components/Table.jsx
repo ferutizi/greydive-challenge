@@ -2,7 +2,7 @@ import './Table.css';
 
 const Table = ({ answers }) => {
     return(
-        <table className='table'>
+        <table className='table' data-testid={'table'}>
           <thead>
             <tr className='table__row--head'>
               <th className='table__th'>Nombre</th>

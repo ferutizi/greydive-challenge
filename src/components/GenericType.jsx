@@ -12,6 +12,7 @@ const GenericType = ({ item, handleChange, checked, index }) => {
                 onChange={handleChange}
                 checked={checked}
                 className='form__input'
+                data-testid={item.name}
                 required
                 autoFocus={index === 0 ? true : false}
             />

@@ -13,7 +13,7 @@ const Modal = ({ setModal }) => {
                     </div>
                     <div>
                         <Link to="/answers">
-                            <button type="button" onClick={() => setModal(false)} className="modal__button">Ver</button>
+                            <button type="button" name='look' onClick={() => setModal(false)} className="modal__button">Ver</button>
                         </Link>
                     </div>
                 </div>
