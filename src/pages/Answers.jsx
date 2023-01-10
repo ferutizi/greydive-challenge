@@ -5,7 +5,7 @@ const Answers = ({ answers }) => {
     return(
       <>
         <Link to="/">
-          <p>volver</p>
+          <button type="button" className="form__submit" style={{fontSize: '1em', width: '6em' }}>volver</button>
         </Link>
         <Table answers={answers} />
       </>

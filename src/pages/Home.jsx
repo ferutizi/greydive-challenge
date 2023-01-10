@@ -7,6 +7,7 @@ const Home = ({ handleSubmit, handleChange, checked, modal, setModal }) => {
     return(
       <>
         <form onSubmit={handleSubmit} className='form'>
+          <h1 className='title'>greydive challenge</h1>
           {data.items.map((item, index) => 
             item.type !== 'submit' ? item.type === 'select' ?
               //if type is select
