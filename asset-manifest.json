@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/greydive-challenge/static/css/main.f6f1c7cb.css",
+    "main.js": "/greydive-challenge/static/js/main.54bfcc21.js",
+    "static/js/787.1160b584.chunk.js": "/greydive-challenge/static/js/787.1160b584.chunk.js",
+    "index.html": "/greydive-challenge/index.html",
+    "main.f6f1c7cb.css.map": "/greydive-challenge/static/css/main.f6f1c7cb.css.map",
+    "main.54bfcc21.js.map": "/greydive-challenge/static/js/main.54bfcc21.js.map",
+    "787.1160b584.chunk.js.map": "/greydive-challenge/static/js/787.1160b584.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6f1c7cb.css",
+    "static/js/main.54bfcc21.js"
+  ]
+}
