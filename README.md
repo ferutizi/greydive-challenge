@@ -1,6 +1,6 @@
 # Greydive-challenge
 
-podes probar el deploy [ACA](https://ferutizi.github.io/)
+podes probar el deploy [ACA](https://ferutizi.github.io/greydive-challenge/)
 
 ## Configuracion inicial
 
