@@ -16,6 +16,7 @@ La aplicacion localmente corre en el puerto [3000](localhost:3000)
 - React
 - Firebase
 - React Testing Library
+- React Router Dom
 
 ## Consideraciones
 
