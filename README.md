@@ -1,6 +1,7 @@
 # Greydive-challenge
 
-podes probar el deploy [ACA](https://ferutizi.github.io/greydive-challenge/)
+Challenge de la empresa Greydive. Formulario con base de datos en firebase.
+Podés probar el deploy [ACA](https://ferutizi.github.io/greydive-challenge/)
 
 ## Configuracion inicial
 
